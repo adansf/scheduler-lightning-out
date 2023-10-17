@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'DIN Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local("DIN Pro"),url(../fonts/DINPro.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'DIN Pro Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: local("DIN Pro Medium"),url(../fonts/DINPro-Medium.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'DIN Pro Bold';
+    font-style: normal;
+    font-weight: 400;
+    src: local("DIN Pro Bold"),url(../fonts/DINPro-Bold.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'DIN Pro Italic';
+    font-style: normal;
+    font-weight: 400;
+    src: local("DIN Pro Bold Italic"),url(../fonts/DINPro-Italic.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'DIN Pro Light';
+    font-style: normal;
+    font-weight: 400;
+    src: local("DIN Pro Light"),url(../fonts/DINPro-Light.woff) format("woff")
+}
+
+:root {
+    --lwc-colorBackgroundToastError: #BD122F !important;
+    --lwc-colorTextError: #BD122F !important;
+    --lwc-colorBackgroundPathLost: #BD122F !important;
+    --lwc-colorTextDestructive: #BD122F !important;
+    --lwc-colorBorderError: #BD122F !important;
+    --lwc-colorBackgroundPathActive: #f49704 !important;
+    --lwc-colorBackgroundPathComplete: #80a7ae !important;
+}
+
+#lightningLocator {
+    * {
+        font-family: 'DIN Pro', Verdana, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'DIN Pro Bold', Verdana, sans-serif;
+        color: #05254e;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 1.5;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    h5 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    h6 {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .slds-text-body_regular {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #05254e;
+    }
+
+    .slds-visual-picker {
+        &_vertical .slds-visual-picker__figure {
+            height: auto;
+        }
+
+        input:checked ~ label {
+            .slds-visual-picker__text {
+                border-color: #80a7ae;
+                box-shadow: 0 0 0 1px #80a7ae inset;
+
+                &:after {
+                    border-right-color: #80a7ae;
+                    border-top-color: #80a7ae;
+                }
+            }
+        }
+
+        input:not(:disabled)~label:hover {
+            .slds-visual-picker__figure {
+                border-color: #80a7ae;
+                box-shadow: 0 0 0 1px #80a7ae inset;
+            }
+        }
+    }
+
+    .slds-button {
+        &.slds-button_neutral {
+            color: #05254e;
+        }
+    }
+
+    .slds-radio_button {
+        color: #05254e;
+
+        .slds-radio_button__label {
+            box-shadow: none;
+        }
+
+        [type=radio]:checked+.slds-radio_faux,
+        [type=radio]:checked+.slds-radio--faux,
+        [type=radio]:checked~.slds-radio_faux,
+        [type=radio]:checked~.slds-radio--faux,
+        [type=radio]:checked+.slds-radio_button__label,
+        [type=radio]:checked+.slds-radio--button__label {
+            background-color: #80a7ae;
+        }
+    }
+
+    .slds-radio--button {
+        [type=radio]:checked+.slds-radio_faux,
+        [type=radio]:checked+.slds-radio--faux,
+        [type=radio]:checked~.slds-radio_faux,
+        [type=radio]:checked~.slds-radio--faux,
+        [type=radio]:checked+.slds-radio_button__label,
+        [type=radio]:checked+.slds-radio--button__label {
+            background-color: #80a7ae;
+        }
+    }
+
+    input[type=text]:not(:read-only):focus,
+    input[type=tel]:not(:read-only):focus,
+    input[type=email]:not(:read-only):focus {
+        border-color: #80a7ae;
+        box-shadow: 0 0 20px rgba(128,167,174,.3);
+    }
+
+    .slds-input-has-icon .slds-input__icon.searchIcon {
+        top: 70%;
+    }
+
+    .slds-input {
+        font-weight: bold;
+    }
+
+    .uiAutocompleteList .googleLogo {
+        display: none;
+    }
+
+
+    .uiInput--lookup .lookup__item.highlighted a {
+        background-color: #05254e;
+        color: #ffffff !important;
+    }
+
+    .uiInput--lookup .lookup__item.highlighted a .uiOutputText {
+        color: #ffffff !important;
+    }
+
+    .slds-rich-text-editor__output #operating-hours,
+    .slds-rich-text-editor__output #holidays {
+        font-size: 13px !important;
+        color: #7b7b7b !important;
+        margin-bottom: 24px;
+    }
+
+    .runtime_appointmentbookingFlowLocation {
+        .uiInput--input {
+            width: 100%;
+            height: calc(var(--lwc-heightInput,1.875rem) + (var(--lwc-borderWidthThin,1px) * 2));
+            padding: 0.5rem;
+        }
+    }
+
+    .actionButtonBar {
+        .flow-button__NEXT,
+        .flow-button__FINISH{
+            font-family: 'DIN Pro', Verdana, sans-serif;
+            background-color: #f49704;
+            border-color: #f49704;
+            border-radius: 1.5rem;
+            height: 3rem;
+            line-height: 3rem;
+            padding: 0 2.5rem;
+            transition: background-color 0.2s ease-in-out;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: #f37d00;
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+
+        .flow-button__BACK {
+            border-radius: 1.5rem;
+            color: #05254e;
+        }
+    }
+
+    .forceAddressAutocomplete {
+        .logoFooter {
+            display: none;
+        }
+    }
+}
